@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public string Get()
         {
-            return "Hallo David v1 - Run on OpenShift ;)";
+            return "Hallo David v1.1 - Run on OpenShift ;)";
         }
     }
 }
