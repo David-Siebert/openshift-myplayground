@@ -3,7 +3,7 @@ metadata:
   name: nodejs
   version: 1.0.0
   attributes:
-    alpha.build-context: src
+    alpha.build-context: DemoUI/src
     alpha.build-dockerfile: Dockerfile
 components:
   - name: buildguidance
@@ -29,7 +29,7 @@ commands:
     exec:
       component: runtime
       commandLine: npm install
-      workingDir: /project/DemoUI/src
+      workingDir: /project/src
       group:
         kind: build
         isDefault: true
@@ -37,7 +37,7 @@ commands:
     exec:
       component: runtime
       commandLine: npm start
-      workingDir: /project/DemoUI/src
+      workingDir: /project/src
       group:
         kind: run
         isDefault: true
@@ -45,7 +45,7 @@ commands:
     exec:
       component: runtime
       commandLine: npm run debug
-      workingDir: /project/DemoUI/src
+      workingDir: /project/src
       group:
         kind: debug
         isDefault: true
@@ -53,7 +53,7 @@ commands:
     exec:
       component: runtime
       commandLine: npm test
-      workingDir: /project/DemoUI/src
+      workingDir: /project/src
       group:
         kind: test
         isDefault: true
