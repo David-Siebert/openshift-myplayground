@@ -1,9 +1,7 @@
 FROM node as build
 WORKDIR /app
-COPY ./DemoUI/package.json /app/
+COPY ./DemoUI/ /app/
 RUN npm install
-
-COPY ./DemoUI .
 RUN npm run build -- --configuration production
 
 FROM nginx as final
