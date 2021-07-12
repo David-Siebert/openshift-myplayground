@@ -1,7 +1,6 @@
 FROM node as build
-
-COPY ./DemoUI/package.json /app/
 WORKDIR /app
+COPY ./DemoUI/package.json /app/
 RUN npm install
 
 COPY ./DemoUI .
