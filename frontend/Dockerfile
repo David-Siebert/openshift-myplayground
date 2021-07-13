@@ -9,4 +9,5 @@ COPY --from=build /app/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/* /usr/share/nginx/html/
 RUN chmod -R 777 /etc/nginx/conf.d
 RUN chmod -R 777 /var/cache/nginx
+RUN chmod -R 777 /var/run/nginx.pid
 EXPOSE 8080
